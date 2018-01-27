@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour {
 	public static bool letterPuzzleDone = false;
 	public static bool glassPuzzleDone = false;
 	public static bool candlePuzzleDone = false;
+
+	//Final lock members
+	public static bool topLayer = false;
+	public static bool midLayer = false;
+	public static bool botLayer = false;
 	public static bool finalPuzzleDone = false;
 
 	// Use this for initialization
@@ -33,6 +38,15 @@ public class GameManager : MonoBehaviour {
 	}
 	void FinishCandlePuzzle(){
 		candlePuzzleDone = true;
+	}
+	void FinishTopLayer(){
+		topLayer = true;
+	}
+	void FinishMidLayer(){
+		midLayer = true;
+	}
+	void FinishBotLayer(){
+		botLayer = true;
 	}
 	void FinishFinalPuzzle(){
 		finalPuzzleDone = true;
