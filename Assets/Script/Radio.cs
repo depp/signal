@@ -140,6 +140,7 @@ public class Radio : MonoBehaviour {
 	}
 
 	void Solved() {
+		GameManager.radioPuzzleDone = true;
 		Debug.Log("PUZZLE SOLVED");
 	}
 }
