@@ -19,10 +19,11 @@ public class Radio : MonoBehaviour {
 	public AudioSource voice;
 
 	// Private state.
-	int _channel;
-	bool _moving;
-	float _startFraction, _endFraction, _curFraction, _time;
-	bool _tunedIn;
+	int _channel; // Channel we are tuned in to.
+	bool _moving; // Needle / dial currently moving.
+	float _startFraction, _endFraction, _curFraction, _time; // Needle / dial movement.
+	bool _tunedIn; // Are we currently tuned in to the right channel?
+	int _solutionProgress; // Once we listen to clip 0, this increments to 0 -> 1, etc. Resets every cycle.
 
 	/// <summary>
 	/// Gets the current radio channel number, 0..channelCount-1.
@@ -92,9 +93,19 @@ public class Radio : MonoBehaviour {
 	void UpdateAudio() {
 		// Index of the current clip playing.
 		int clipIndex = ClipIndex();
+		// We wrapped around, reset the solution lock.
+		if (_solutionProgress > clipIndex + 1) {
+			_solutionProgress = 0;
+		}
 		// Channel that this clip plays on.
 		int clipChannel = clipIndex % channelCount;
 		bool tunedIn = clipChannel == channel;
+		if (tunedIn && clipIndex == _solutionProgress) {
+			_solutionProgress++;
+			if (_solutionProgress == this.clipTimes.Length) {
+				Solved();
+			}
+		}
 		if (tunedIn == _tunedIn) {
 			return;
 		}
@@ -126,5 +137,9 @@ public class Radio : MonoBehaviour {
 		if (f != null) {
 			f();
 		}
+	}
+
+	void Solved() {
+		Debug.Log("PUZZLE SOLVED");
 	}
 }
