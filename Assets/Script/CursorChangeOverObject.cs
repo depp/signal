@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 public class CursorChangeOverObject : MonoBehaviour {
 	public static Texture2D defaultCursor;
 	public Texture2D changeTo;
