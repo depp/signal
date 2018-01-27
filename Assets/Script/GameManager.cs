@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 	public static bool letterPuzzleDone = false;
 	public static bool glassPuzzleDone = false;
 	public static bool candlePuzzleDone = false;
+	public static bool hasLetter = false;
 
 	//Final lock members
 	public static bool topLayer = false;
