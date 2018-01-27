@@ -386,6 +386,7 @@ MonoBehaviour:
   - {fileID: 261372199}
   inputCombo: 000000000000000000000000
   correctCombo: 020000000000000001000000
+  position: 2
   completed: 0
 --- !u!4 &199573378
 Transform:
@@ -713,6 +714,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &340100329
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4116430996063990, guid: a905bfe73ed216d47b45a632994d89a2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.4925904
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116430996063990, guid: a905bfe73ed216d47b45a632994d89a2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.6734223
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116430996063990, guid: a905bfe73ed216d47b45a632994d89a2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.72343206
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116430996063990, guid: a905bfe73ed216d47b45a632994d89a2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116430996063990, guid: a905bfe73ed216d47b45a632994d89a2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116430996063990, guid: a905bfe73ed216d47b45a632994d89a2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116430996063990, guid: a905bfe73ed216d47b45a632994d89a2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116430996063990, guid: a905bfe73ed216d47b45a632994d89a2, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a905bfe73ed216d47b45a632994d89a2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &394252418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,6 +1786,7 @@ MonoBehaviour:
   - {fileID: 1984700700}
   inputCombo: 000000000000000000000000
   correctCombo: 000000000100000002000000
+  position: 0
   completed: 0
 --- !u!4 &1758222796
 Transform:
@@ -2140,6 +2184,7 @@ MonoBehaviour:
   - {fileID: 875401858}
   inputCombo: 000000000000000000000000
   correctCombo: 030000000200000004000000
+  position: 1
   completed: 0
 --- !u!4 &2145506575
 Transform:

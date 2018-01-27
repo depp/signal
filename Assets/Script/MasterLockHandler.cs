@@ -16,6 +16,7 @@ public class MasterLockHandler : MonoBehaviour {
 			}
 			if (test) {
 				finished = true;
+				GameManager.finalPuzzleDone = true;
 				Debug.Log ("Woot!");
 			}
 		}
