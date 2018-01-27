@@ -16,11 +16,10 @@ public class Candle : MonoBehaviour {
 		if (handler.answered == false) {
 			if (currentState < states.candles.Length - 1) {
 				currentState++;
-				sprite.sprite = states.candles [currentState];
 			} else {
 				currentState = 0;
-				sprite.sprite = states.candles [0];
 			}
 		}
+		sprite.sprite = states.candles [currentState];
 	}
 }

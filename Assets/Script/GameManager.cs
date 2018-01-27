@@ -25,30 +25,4 @@ public class GameManager : MonoBehaviour {
 		}
 		DontDestroyOnLoad (gameObject);
 	}
-
-	//Functions to finish each puzzle
-	void FinishRadioPuzzle(){
-		radioPuzzleDone = true;
-	}
-	void FinishLetterPuzzle(){
-		letterPuzzleDone = true;
-	}
-	void FinishGlassPuzzle(){
-		glassPuzzleDone = true;
-	}
-	void FinishCandlePuzzle(){
-		candlePuzzleDone = true;
-	}
-	void FinishTopLayer(){
-		topLayer = true;
-	}
-	void FinishMidLayer(){
-		midLayer = true;
-	}
-	void FinishBotLayer(){
-		botLayer = true;
-	}
-	void FinishFinalPuzzle(){
-		finalPuzzleDone = true;
-	}
 }

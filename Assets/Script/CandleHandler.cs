@@ -25,7 +25,15 @@ public class CandleHandler : MonoBehaviour {
 			if (test) {
 				Debug.Log ("puzzle complete");
 				answered = true;
+				GameManager.candlePuzzleDone = true;
 			}
+		}
+
+		if (GameManager.candlePuzzleDone && !answered) {
+			answered = true;
+			candles [0].currentState = 4;
+			candles [1].currentState = 5;
+			candles [2].currentState = 2;
 		}
 	}
 }
