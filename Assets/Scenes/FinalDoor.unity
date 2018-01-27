@@ -479,7 +479,7 @@ MonoBehaviour:
   - {fileID: 138308597}
   - {fileID: 261372199}
   inputCombo: 000000000000000000000000
-  correctCombo: 020000000000000001000000
+  correctCombo: 000000000400000001000000
   position: 2
   completed: 0
 --- !u!4 &199573378
@@ -2149,7 +2149,7 @@ MonoBehaviour:
   - {fileID: 223784405}
   - {fileID: 1984700700}
   inputCombo: 000000000000000000000000
-  correctCombo: 000000000100000002000000
+  correctCombo: 040000000000000002000000
   position: 0
   completed: 0
 --- !u!4 &1758222796
