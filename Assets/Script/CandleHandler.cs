@@ -10,6 +10,7 @@ public class CandleHandler : MonoBehaviour {
 	public bool answered = false;
 
 	void Update(){
+
 		for (int i = 0; i < candles.Length; i++) {
 			currentCandleInput [i] = candles [i].currentState;
 		}

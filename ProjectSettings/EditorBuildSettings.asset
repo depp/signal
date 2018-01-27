@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Michael_Test/Candle_Test.unity
+    guid: 22ca761c02fd0e84f8aba9141bc83d09
+  - enabled: 1
+    path: Assets/Michael_Test/Confessional.unity
+    guid: 52f356913c663a7489bd3e0e02d54e87
