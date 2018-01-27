@@ -140,6 +140,8 @@ public class Radio : MonoBehaviour {
 	}
 
 	public void Solve() {
+		voice.Stop();
+		noise.Stop();
 		Dialogue.instance.PlayScript("Radio Solved");
 	}
 }
