@@ -1,3 +1,3 @@
 # Signal
 
-This is a game we are making for Global Game Jam 2018.
+This is the best game that we are making for Global Game Jam 2018.
