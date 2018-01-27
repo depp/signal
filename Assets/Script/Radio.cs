@@ -10,6 +10,8 @@ using UnityEngine;
 public class Radio : MonoBehaviour {
 	public int channelCount;
 	public event Action channelChanged;
+	public AnimationCurve switchCurve;
+	public float switchTime;
 
 	private int _channel;
 	/// <summary>
@@ -22,20 +24,21 @@ public class Radio : MonoBehaviour {
 				return;
 			}
 			_channel = value;
-			var f = channelChanged;
-			if (f != null) {
-				f();
-			}
+			_moving = true;
+			_startFraction = _curFraction;
+			_endFraction = (float)value / (float)(channelCount - 1);
+			_time = 0.0f;
+			OnChannelChanged();
 		}
 	}
 
 	/// <summary>
 	/// Gets the radio channel as a fraction from 0..1.
 	/// </summary>
+	bool _moving;
+	float _startFraction, _endFraction, _curFraction, _time;
 	public float fraction {
-		get {
-			return (float)channel / (float)(channelCount - 1);
-		}
+		get { return _curFraction; }
 	}
 
 	public void Start() {
@@ -44,11 +47,35 @@ public class Radio : MonoBehaviour {
 		}
 	}
 
+	public void Update() {
+		if (!_moving) {
+			return;
+		}
+		_time += Time.deltaTime;
+		if (_time >= switchTime) {
+			_moving = false;
+			_curFraction = _endFraction;
+		} else {
+			_curFraction = Mathf.Lerp(_startFraction, _endFraction, switchCurve.Evaluate(_time / switchTime));
+		}
+		OnChannelChanged();
+	}
+
 	public void NextChannel() {
+		if (_moving) {
+			return;
+		}
 		var c = channel + 1;
 		if (c >= channelCount) {
 			c = 0;
 		}
 		channel = c;
+	}
+
+	void OnChannelChanged() {
+		var f = channelChanged;
+		if (f != null) {
+			f();
+		}
 	}
 }
