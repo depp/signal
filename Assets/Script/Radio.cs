@@ -8,12 +8,22 @@ using UnityEngine;
 /// need to be attached to some particular object, it is just a part of the scene.
 /// </summary>
 public class Radio : MonoBehaviour {
-	public int channelCount;
+	// Editor properties.
+	public int channelCount = 4;
 	public event Action channelChanged;
 	public AnimationCurve switchCurve;
-	public float switchTime;
+	public float switchTime = 0.2f;
+	public float deadTime = 0.2f; // Time after NextChannel() where clicks are ignored.
+	public float[] clipTimes; // The time, in seconds, of the start of each clip in the speech.
+	public AudioSource noise;
+	public AudioSource voice;
 
-	private int _channel;
+	// Private state.
+	int _channel;
+	bool _moving;
+	float _startFraction, _endFraction, _curFraction, _time;
+	bool _tunedIn;
+
 	/// <summary>
 	/// Gets the current radio channel number, 0..channelCount-1.
 	/// </summary>
@@ -25,9 +35,7 @@ public class Radio : MonoBehaviour {
 			}
 			_channel = value;
 			_moving = true;
-			_startFraction = _curFraction;
-			_endFraction = (float)value / (float)(channelCount - 1);
-			_time = 0.0f;
+			MoveTo((float)value / (float)(channelCount - 1));
 			OnChannelChanged();
 		}
 	}
@@ -35,8 +43,7 @@ public class Radio : MonoBehaviour {
 	/// <summary>
 	/// Gets the radio channel as a fraction from 0..1.
 	/// </summary>
-	bool _moving;
-	float _startFraction, _endFraction, _curFraction, _time;
+
 	public float fraction {
 		get { return _curFraction; }
 	}
@@ -48,6 +55,26 @@ public class Radio : MonoBehaviour {
 	}
 
 	public void Update() {
+		UpdateFraction();
+		UpdateAudio();
+	}
+
+	/// <summary>
+	/// Tune the radio to the next channel.
+	/// </summary>
+	public void NextChannel() {
+		if (_moving && _time < deadTime) {
+			return;
+		}
+		var c = channel + 1;
+		if (c >= channelCount) {
+			c = 0;
+		}
+		channel = c;
+	}
+		
+	// UpdateFraction updates the dial & knob position.
+	void UpdateFraction() {
 		if (!_moving) {
 			return;
 		}
@@ -61,17 +88,39 @@ public class Radio : MonoBehaviour {
 		OnChannelChanged();
 	}
 
-	public void NextChannel() {
-		if (_moving) {
+	// UpdateAudio updates the audio sources to match the radio channel.
+	void UpdateAudio() {
+		// Index of the current clip playing.
+		int clipIndex = ClipIndex();
+		// Channel that this clip plays on.
+		int clipChannel = clipIndex % channelCount;
+		bool tunedIn = clipChannel == channel;
+		if (tunedIn == _tunedIn) {
 			return;
 		}
-		var c = channel + 1;
-		if (c >= channelCount) {
-			c = 0;
-		}
-		channel = c;
+		_tunedIn = tunedIn;
+		voice.mute = !tunedIn;
 	}
 
+	// ClipIndex returns the index of the current audio clip playing.
+	int ClipIndex() {
+		float voiceTime = voice.time;
+		for (int i = 1; i < clipTimes.Length; i++) {
+			if (voiceTime < clipTimes[i]) {
+				return i - 1;
+			}
+		}
+		return clipTimes.Length - 1;
+	}
+
+	// MoveTo moves the dial & knob to a target position.
+	void MoveTo(float target) {
+		_startFraction = _curFraction;
+		_endFraction = target;
+		_time = 0.0f;
+	}
+
+	// OnChannelChanged sends the channelChanged event.
 	void OnChannelChanged() {
 		var f = channelChanged;
 		if (f != null) {
