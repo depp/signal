@@ -22,8 +22,7 @@ public class RadioKnob : MonoBehaviour, IPointerDownHandler {
 	}
 
 	public void OnPointerDown(PointerEventData data) {
-		// radio.NextChannel();
-		radio.Solve();
+		radio.NextChannel();
 	}
 
 	void ChannelDidChange() {
