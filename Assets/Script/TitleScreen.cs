@@ -15,6 +15,7 @@ public class TitleScreen : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Space)) {
+			SceneManager.LoadScene (1);
 			Debug.Log ("This would move to the next scene");
 		} else if (Input.anyKeyDown) {
 			no.text += "no";
