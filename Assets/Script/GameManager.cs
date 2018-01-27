@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-	public static GameManager instance = null;
+	public GameManager instance = null;
 
-	public static bool radioPuzzleDone = false;
-	public static bool letterPuzzleDone = false;
-	public static bool glassPuzzleDone = false;
-	public static bool candlePuzzleDone = false;
+	public bool radioPuzzleDone = false;
+	public bool letterPuzzleDone = false;
+	public bool glassPuzzleDone = false;
+	public bool candlePuzzleDone = false;
 
 	//Final lock members
-	public static bool topLayer = false;
-	public static bool midLayer = false;
-	public static bool botLayer = false;
-	public static bool finalPuzzleDone = false;
+	public bool topLayer = false;
+	public bool midLayer = false;
+	public bool botLayer = false;
+	public bool finalPuzzleDone = false;
 
 	// Use this for initialization
 	void Start () {
