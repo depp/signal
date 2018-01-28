@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -8,9 +6,52 @@ using UnityEngine;
 /// need to be attached to some particular object, it is just a part of the scene.
 /// </summary>
 public class Radio : MonoBehaviour {
+	class Value {
+		readonly float _switchTime;
+		readonly AnimationCurve _switchCurve;
+		bool _moving;
+		float _start, _end, _cur, _time;
+
+		public Value(float switchTime, AnimationCurve switchCurve) {
+			_switchTime = switchTime;
+			_switchCurve = switchCurve;
+		}
+
+		public float value {
+			get { return _cur; }
+		}
+
+		public void Set(float value) {
+			if (_moving) {
+				_end = value;
+			} else {
+				_cur = value;
+			}
+		}
+
+		public void MoveTo(float value) {
+			_moving = true;
+			_start = _cur;
+			_end = value;
+			_time = 0.0f;
+		}
+
+		public void Update() {
+			if (!_moving) {
+				return;
+			}
+			_time += Time.deltaTime;
+			if (_time >= _switchTime) {
+				_moving = false;
+				_cur = _end;
+			} else {
+				_cur = Mathf.Lerp(_start, _end, _switchCurve.Evaluate(_time / _switchTime));
+			}
+		}
+	}
+
 	// Editor properties.
 	public int channelCount = 4;
-	public event Action channelChanged;
 	public AnimationCurve switchCurve;
 	public float switchTime = 0.2f;
 	public float deadTime = 0.2f; // Time after NextChannel() where clicks are ignored.
@@ -21,9 +62,9 @@ public class Radio : MonoBehaviour {
 	public GameObject sceneTransition;
 
 	// Private state.
+	float _deadTimeRemaining;
 	int _channel; // Channel we are tuned in to.
-	bool _moving; // Needle / dial currently moving.
-	float _startFraction, _endFraction, _curFraction, _time; // Needle / dial movement.
+	Value _dial, _signalLock; // Needle / dial movement.
 	int _clipIndex; // Clip currently being broadcast.
 	int _solutionIndex = 1; // Position in solution 0..clipCount, clipCount = solved.
 
@@ -37,36 +78,85 @@ public class Radio : MonoBehaviour {
 				return;
 			}
 			_channel = value;
-			_moving = true;
-			MoveTo((float)value / (float)(channelCount - 1));
-			OnChannelChanged();
+			_dial.MoveTo(_channel / (float)(channelCount-1));
 		}
 	}
 
 	/// <summary>
 	/// Gets the radio channel as a fraction from 0..1.
 	/// </summary>
-
-	public float fraction {
-		get { return _curFraction; }
+	public float dialPosition {
+		get { return _dial.value; }
 	}
 
-	public void Start() {
+	/// <summary>
+	/// Get the signal lock as a fraction 0..1, 1 = puzzle solved.
+	/// </summary>
+	public float signalLock {
+		get { return _signalLock.value; }
+	}
+
+	public event Action update;
+
+	void Start() {
 		if (channelCount < 2) {
 			Debug.LogErrorFormat("Want at least two channels for Radio");
 		}
+		_dial = new Value(switchTime, switchCurve);
+		_signalLock = new Value(switchTime, switchCurve);
 	}
 
-	public void Update() {
-		UpdateFraction();
-		UpdateAudio();
+	void Update() {
+		_deadTimeRemaining -= Time.deltaTime;
+		float pos = voice.time;
+		float solutionPos = clipTimes[clipTimes.Length - 1];
+		// Check to see if we have solved the puzzle.
+		if (_solutionIndex == clipTimes.Length && pos > solutionPos) {
+			Solve();
+			return;
+		}
+		// Figure out which clip we are playing.
+		if (pos < clipTimes[0]) {
+			_clipIndex = 0;
+		} else if (_clipIndex < clipTimes.Length - 1 && pos > clipTimes[_clipIndex]) {
+			_clipIndex++;
+		}
+		// Figure out if we are tuned in to the right channel.
+		bool isTuned = (_clipIndex % channelCount) == channel;
+		voice.mute = !isTuned;
+		// Check the solution progress.
+		if (pos < solutionTolerance && isTuned) {
+			_solutionIndex = 1;
+		} else if (_solutionIndex > 0) {
+			float clipStart = _clipIndex > 0 ? clipTimes[_clipIndex - 1] : 0.0f;
+			float clipEnd = clipTimes[_clipIndex];
+			// Only check in middle of clip.
+			bool isInMiddle = clipStart + solutionTolerance < pos && pos < clipEnd - solutionTolerance;
+			if (isInMiddle) {
+				if (isTuned) {
+					_solutionIndex = _clipIndex + 1;
+				} else {
+					_solutionIndex = 0;
+					_signalLock.MoveTo(0.0f);
+				}
+			}
+		}
+		if (_solutionIndex > 0) {
+			_signalLock.Set(pos / solutionPos);
+		}
+		_dial.Update();
+		_signalLock.Update();
+		var f = update;
+		if (f != null) {
+			f();
+		}
 	}
 
 	/// <summary>
 	/// Tune the radio to the next channel.
 	/// </summary>
 	public void NextChannel() {
-		if (_moving && _time < deadTime) {
+		if (_deadTimeRemaining > 0.0f) {
 			return;
 		}
 		var c = channel + 1;
@@ -74,87 +164,7 @@ public class Radio : MonoBehaviour {
 			c = 0;
 		}
 		channel = c;
-		if (_solutionIndex > 0) {
-			if (_solutionIndex == clipTimes.Length) {
-				_solutionIndex = 0;
-				return;
-			}
-			float curTime = voice.time;
-			float targetTime = clipTimes[_solutionIndex - 1];
-			float delta = Mathf.Abs(targetTime - curTime);
-			bool ok = delta < solutionTolerance;
-			// Debug.LogFormat("OK={0}, delta={1}", ok, delta);
-			if (!ok) {
-				_solutionIndex = 0;
-			} else {
-				_solutionIndex++;
-			}
-		}
-	}
-		
-	// UpdateFraction updates the dial & knob position.
-	void UpdateFraction() {
-		if (!_moving) {
-			return;
-		}
-		_time += Time.deltaTime;
-		if (_time >= switchTime) {
-			_moving = false;
-			_curFraction = _endFraction;
-		} else {
-			_curFraction = Mathf.Lerp(_startFraction, _endFraction, switchCurve.Evaluate(_time / switchTime));
-		}
-		OnChannelChanged();
-	}
-
-	// UpdateAudio updates the audio sources to match the radio channel.
-	void UpdateAudio() {
-		if (voice.time < clipTimes[0]) {
-			if (_solutionIndex == clipTimes.Length) {
-				Solve();
-			}
-			if (_clipIndex != 0) {
-				_clipIndex = 0;
-				_solutionIndex = 1;
-			}
-		} else if (_clipIndex < clipTimes.Length) {
-			float switchTime = clipTimes[_clipIndex];
-			if (voice.time > switchTime) {
-				_clipIndex++;
-				// Debug.LogFormat("clipIndex {0}, solutionIndex {1}, time {2}", _clipIndex, _solutionIndex, switchTime);
-				if (_clipIndex == clipTimes.Length && _solutionIndex == clipTimes.Length) {
-					Solve();
-				}
-			}
-		}
-		int clipChannel = _clipIndex % channelCount;
-		voice.mute = clipChannel != _channel;
-	}
-
-	// ClipIndex returns the index of the current audio clip playing.
-	int ClipIndex() {
-		float voiceTime = voice.time;
-		for (int i = 1; i < clipTimes.Length; i++) {
-			if (voiceTime < clipTimes[i]) {
-				return i - 1;
-			}
-		}
-		return clipTimes.Length - 1;
-	}
-
-	// MoveTo moves the dial & knob to a target position.
-	void MoveTo(float target) {
-		_startFraction = _curFraction;
-		_endFraction = target;
-		_time = 0.0f;
-	}
-
-	// OnChannelChanged sends the channelChanged event.
-	void OnChannelChanged() {
-		var f = channelChanged;
-		if (f != null) {
-			f();
-		}
+		_deadTimeRemaining = deadTime;
 	}
 
 	public void Solve() {

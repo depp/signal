@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 /// <summary>
@@ -14,18 +12,17 @@ public class RadioKnob : MonoBehaviour, IPointerDownHandler {
 
 	// Private state.
 	private Quaternion baseRotation;
-	private SpriteRenderer spriteRenderer;
 
 	void Start() {
 		baseRotation = transform.localRotation;
-		radio.channelChanged += ChannelDidChange;
+		radio.update += RadioUpdate;
 	}
 
 	public void OnPointerDown(PointerEventData data) {
 		radio.NextChannel();
 	}
 
-	void ChannelDidChange() {
-		transform.localRotation = baseRotation * Quaternion.AngleAxis(knobRotation * radio.fraction, Vector3.forward);
+	void RadioUpdate() {
+		transform.localRotation = baseRotation * Quaternion.AngleAxis(knobRotation * radio.dialPosition, Vector3.forward);
 	}
 }
