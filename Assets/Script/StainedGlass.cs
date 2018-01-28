@@ -5,11 +5,19 @@ using UnityEngine.EventSystems;
 
 public class StainedGlass : MonoBehaviour, IPointerDownHandler {
 	public ColorSet colors;
-	int colorIndex;
+	public int colorIndex;
+	public int position;
 	SpriteRenderer sprite;
 
 	void Start() {
 		sprite = GetComponent<SpriteRenderer>();
+		colorIndex = GameManager.glassState [position];
+	}
+
+	void Update(){
+		var colorArray = colors.colors;
+		sprite.color = colorArray [colorIndex];
+		GameManager.glassState [position] = colorIndex;
 	}
 
 	public void OnPointerDown(PointerEventData data) {

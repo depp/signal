@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour {
 	public static bool botLayer = false;
 	public static bool finalPuzzleDone = false;
 
+	//Stained Glass states
+	public static int[] glassState = {0,0,0};
+
 	//Letter
 	public static int letterState = -1;
 
