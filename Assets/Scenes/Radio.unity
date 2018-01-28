@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830eed4815784374fb204703ee80b020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: ChurchInt
+  sceneName: ChurchIntFirst
 --- !u!114 &1522076251
 MonoBehaviour:
   m_ObjectHideFlags: 0
