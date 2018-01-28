@@ -522,15 +522,16 @@ MonoBehaviour:
   switchTime: 0.2
   deadTime: 0.2
   clipTimes:
-  - 0
-  - 0.84
-  - 1.39
-  - 2.17
-  - 2.84
-  - 3.39
-  - 4.28
+  - 0.71
+  - 1.23
+  - 2.01
+  - 2.69
+  - 3.29
+  - 4.04
+  - 4.89
   noise: {fileID: 919924151}
   voice: {fileID: 10794758}
+  solutionTolerance: 0.3
 --- !u!212 &225984097
 SpriteRenderer:
   m_ObjectHideFlags: 0
