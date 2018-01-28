@@ -7,7 +7,7 @@ public class LoadSceneOnClick : MonoBehaviour {
 	public int sceneCode;
 
 	void OnMouseDown(){
-		Cursor.SetCursor (defaultCursor,Vector2.zero,CursorMode.Auto);
+		Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 		SceneManager.LoadScene (sceneCode);
 	}
 }
