@@ -1,6 +1,6 @@
 %radio solved
 : You - umm... hello?
-: ??? - Oh thank the Lordt! Listen, I’ve been trapped in here for god knows how long, and I can’t get out!
+: ??? - Oh thank the Lord! Listen, I’ve been trapped in here for god knows how long, and I can’t get out!
 : ??? - Please, find a way to get this door open!
 : You - OK, help me out here. Where are you?
 : ??? - I’m in the bell tower of the church! I think the only way out is blocked from the outside!
