@@ -836,7 +836,7 @@ MonoBehaviour:
   - {fileID: 1381318910}
   - {fileID: 403394999}
   currentCandleInput: 000000000000000000000000
-  correctAnswer: 040000000500000002000000
+  correctAnswer: 050000000100000003000000
   answered: 0
 --- !u!1 &1364647438
 GameObject:

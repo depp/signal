@@ -18,6 +18,7 @@ public class MasterLockHandler : MonoBehaviour {
 				finished = true;
 				GameManager.finalPuzzleDone = true;
 				Debug.Log ("Woot!");
+				SceneChanger.ChangeScene ("End");
 			}
 		}
 	}
