@@ -7,7 +7,7 @@ public class LetterDialogue : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (GameManager.LetterFind == false) {
-			Dialogue.instance.PlayScript ("Discover Letter Puzzle",ReportFind);
+			Dialogue.instance.PlayScript ("Discover Letter Puzzle", ReportFind);
 		}
 
 		if (GameManager.letterPuzzleDone && !GameManager.LetterFinish) {
