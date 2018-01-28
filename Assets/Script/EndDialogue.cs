@@ -4,10 +4,5 @@ using UnityEngine;
 
 public class EndDialogue : MonoBehaviour {
 	public static void PlayScript(){
-		Dialogue.instance.PlayScript ("End Dialog", Cut);
-	}
-
-	public static void Cut(){
-		SceneChanger.ChangeScene ("Credits");
 	}
 }
