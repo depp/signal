@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830eed4815784374fb204703ee80b020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCode: 4
+  sceneCode: 6
 --- !u!114 &245084022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: 3972597bf5a0c4c4bbee832e869c780d, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -357,8 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 0}
-  changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
+  changeTo: {fileID: 2800000, guid: 3972597bf5a0c4c4bbee832e869c780d, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
 --- !u!114 &715576964
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830eed4815784374fb204703ee80b020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCode: 0
+  sceneCode: 3
 --- !u!1 &830472710
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 830472713}
   - component: {fileID: 830472712}
   m_Layer: 0
-  m_Name: GlassConfess
+  m_Name: glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830eed4815784374fb204703ee80b020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCode: 0
+  sceneCode: 5
 --- !u!114 &830472713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,8 +427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 0}
-  changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
+  changeTo: {fileID: 2800000, guid: 3972597bf5a0c4c4bbee832e869c780d, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
 --- !u!60 &830472714
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 1301229328}
   - component: {fileID: 1301229329}
   m_Layer: 0
-  m_Name: Pews
+  m_Name: Candle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -532,8 +532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 0}
-  changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
+  changeTo: {fileID: 2800000, guid: 3972597bf5a0c4c4bbee832e869c780d, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
 --- !u!114 &1301229329
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830eed4815784374fb204703ee80b020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCode: 3
+  sceneCode: 4
 --- !u!1 &1540645866
 GameObject:
   m_ObjectHideFlags: 0

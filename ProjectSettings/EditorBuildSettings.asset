@@ -4,4 +4,25 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 2d6dcddddcef24560b54c075841b7a3b
+  - enabled: 1
+    path: Assets/Dietrich_Test/Radio.unity
+    guid: 1b81eac26e8614d73aee11e1da7e3b29
+  - enabled: 1
+    path: Assets/Scenes/ChurchInt.unity
+    guid: 823b7685d11ab0846863448747f4a2c7
+  - enabled: 1
+    path: Assets/Scenes/Altar.unity
+    guid: 9575a4d95e232d64e998d9ea34b6b469
+  - enabled: 1
+    path: Assets/Scenes/Candle.unity
+    guid: 22ca761c02fd0e84f8aba9141bc83d09
+  - enabled: 1
+    path: Assets/Dietrich_Test/Stained_Glass.unity
+    guid: d12679113a08a4b7ab7c161b06c4b2ce
+  - enabled: 1
+    path: Assets/Scenes/FinalDoor.unity
+    guid: d6c08d5967376b749a0f1310c72f98c6
