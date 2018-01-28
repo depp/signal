@@ -11,12 +11,11 @@ public class CandleHandler : MonoBehaviour {
 
 	void Start(){
 		for (int i = 0; i < 3; i++) {
-			currentCandleInput [i] = GameManager.candleStates [i];
+			candles [i].currentState = GameManager.candleStates [i];
 		}
 	}
 
 	void Update(){
-
 		for (int i = 0; i < candles.Length; i++) {
 			currentCandleInput [i] = candles [i].currentState;
 		}
