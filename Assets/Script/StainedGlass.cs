@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class StainedGlass : MonoBehaviour {
 	public ColorSet colors;
@@ -11,7 +12,7 @@ public class StainedGlass : MonoBehaviour {
 		sprite = GetComponent<SpriteRenderer>();
 	}
 
-	void OnMouseDown() {
+	public void OnPointerDown(PointerEventData data) {
 		var colorArray = colors.colors;
 		colorIndex++;
 		if (colorIndex >= colorArray.Length) {
