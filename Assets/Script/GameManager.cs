@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour {
 	//Letter
 	public static int letterState = -1;
 
+	//Candle states
+	public static int[] candleStates = {0,0,0};
+
 	//Final lock
 	public static int[] lockStates = {0,0,0,0,0,0,0,0,0};
 

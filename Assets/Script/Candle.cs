@@ -13,6 +13,10 @@ public class Candle : MonoBehaviour, IPointerDownHandler {
 		sprite = GetComponent<SpriteRenderer>();
 	}
 
+	void Update(){
+		sprite.sprite = states.candles [currentState];
+	}
+
 	public void OnPointerDown(PointerEventData data) {
 		if (handler.answered == false) {
 			if (currentState < states.candles.Length - 1) {
@@ -21,6 +25,5 @@ public class Candle : MonoBehaviour, IPointerDownHandler {
 				currentState = 0;
 			}
 		}
-		sprite.sprite = states.candles [currentState];
 	}
 }
