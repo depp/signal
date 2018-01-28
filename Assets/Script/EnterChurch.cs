@@ -9,9 +9,18 @@ public class EnterChurch : MonoBehaviour {
 		if (GameManager.EnteredChurch == false) {
 			Dialogue.instance.PlayScript ("Entering Church", Report);
 		}
+
+		if (GameManager.finalPuzzleDone) {
+			Dialogue.instance.PlayScript ("Lock Encounter", Finish);
+		}
 	}
 
 	void Report(){
 		GameManager.EnteredChurch = true;
+	}
+
+	void Finish(){
+		SceneChanger.ChangeScene ("End");
+
 	}
 }

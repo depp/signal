@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour {
 
 	//Dialog checks
 	public static bool EnteredChurch = false;
+	public static bool FinalDoor = false;
+	public static bool FinalDoorSecond = false;
 
 	// Use this for initialization
 	void Start () {
