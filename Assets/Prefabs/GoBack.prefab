@@ -78,10 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: 3972597bf5a0c4c4bbee832e869c780d, type: 3}
   hotSpot: {x: 0, y: 0}
-  cursorMode: 0
 --- !u!114 &114385091694993884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -93,4 +91,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830eed4815784374fb204703ee80b020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCode: 2
+  sceneName: ChurchInt
