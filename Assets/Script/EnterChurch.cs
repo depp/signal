@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnterChurch : MonoBehaviour {
 
+	void Start(){
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (GameManager.EnteredChurch == false) {
