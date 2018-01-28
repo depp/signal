@@ -9,9 +9,17 @@ public class ViewOfDoor : MonoBehaviour {
 		if (!GameManager.FinalDoor) {
 			Dialogue.instance.PlayScript ("First Lock Encounter", Report);
 		}
+
+		if (GameManager.finalPuzzleDone && !GameManager.FinalDoorSecond) {
+			GameManager.FinalDoorSecond = true;
+			Dialogue.instance.PlayScript("Lock Encounter", MoveOne);
+		}
 	}
 
 	void Report(){
 		GameManager.FinalDoor = true;
+	}
+	void MoveOne(){
+		SceneChanger.ChangeScene ("End");
 	}
 }
