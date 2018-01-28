@@ -18,11 +18,11 @@ public class LockHandler : MonoBehaviour {
 			}
 		} else if (position == 1) {
 			for (int i = 3; i < 6; i++) {
-				locks [i].currentPosition = GameManager.lockStates [i];
+				locks [i-3].currentPosition = GameManager.lockStates [i];
 			}
 		} else if (position == 2) {
 			for (int i = 6; i < 9; i++) {
-				locks [i].currentPosition = GameManager.lockStates [i];
+				locks [i-6].currentPosition = GameManager.lockStates [i];
 			}
 		}
 	}
@@ -59,11 +59,11 @@ public class LockHandler : MonoBehaviour {
 			}
 		} else if (position == 1) {
 			for (int i = 3; i < 6; i++) {
-				GameManager.lockStates [i] = locks [i].currentPosition;
+				GameManager.lockStates [i] = locks [i-3].currentPosition;
 			}
 		} else if (position == 2) {
 			for (int i = 6; i < 9; i++) {
-				GameManager.lockStates [i] = locks [i].currentPosition;
+				GameManager.lockStates [i] = locks [i-6].currentPosition;
 			}
 		}
 			
