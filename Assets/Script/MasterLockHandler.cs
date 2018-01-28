@@ -9,7 +9,7 @@ public class MasterLockHandler : MonoBehaviour {
 	void Update(){
 		if (!finished) {
 			bool test = true;
-			for (int i = 0; i < locks.Length - 1; i++) {
+			for (int i = 0; i < locks.Length; i++) {
 				if (locks [i].completed == false) {
 					test = false;
 				}
