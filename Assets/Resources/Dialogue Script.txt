@@ -1,3 +1,69 @@
-% Radio Solved
-Test Dialogue 1:Subtitles for my test dialogue.
-Test Dialogue 2:Subtitles for more test dialogue.
+%radio solved
+: You - umm... hello?
+: ??? - Oh thank the Lordt! Listen, I’ve been trapped in here for god knows how long, and I can’t get out!
+: ??? - Please, find a way to get this door open!
+: You - OK, help me out here. Where are you?
+: ??? - I’m in the bell tower of the church! I think the only way out is blocked from the outside!
+: You - OK, sit tight, I’ll try and get you out.
+
+%entering church
+: You - OK, I’m in.
+: ??? - Look for a door on the right—should lead you right up to the belltower.
+
+%first lock encounter
+: You - OK, I’m at the door, it doesn’t seem to be blocked by anything,
+: You -  but there’s some sort of combination lock on it.
+: ??? - It has to be around here somewhere… right?
+: You - I hope so… I’ll take a look around.
+
+%discover letter puzzle
+: You - Found a letter down here. Something about a lockdown of a city?
+: ??? - Yeah, that one was for me. I wanted to send her letters back, I really did,
+: ??? - but those bastards at the post office blocked mail from leaving the city.
+
+%complete letter puzzle
+: You - What was her name?
+: ??? - Abigail, but she preferred Abby. When things went bad, she went back home to see her family.
+: You - And never came back…?
+: ??? - *sigh* …
+
+%discover candle puzzle
+: You - I’m in the confession booth—I think there are some clues here we can use.
+: You - It looks like people etched their confessions right into the wood.
+: ??? - Huh. Who knew it would take the end of the world for people to clear their conscience?
+
+%complete candle puzzle
+: ??? - I remember everyday I had to light all those candles, and I hated it. Those things would never stay lit for more than 10 minutes.
+: ??? - Heh. It seems ridiculous to complain about things like that now…
+: You - When did you get a chance to light all these candles?
+: ??? - You know, I wasn’t always stuck up here.
+
+%discover stained glass puzzle
+: You - So how did you end up in a church of all places?
+: ??? - This place used to be a shelter when things started to go south. Resources ran out, and so did the people.
+: ??? - I’m the only one who stuck around. Went upstairs to look for supplies one day ... and well, here I am.
+
+%complete stained glass puzzle
+: ??? - You know, I remember when this place was still running, people coming in and out at all hours of the day.
+: ??? - I know that most of them weren’t here to talk to me, but any human contact was nice…
+: ??? - I miss it so much…… I’m glad you’re here.
+
+%lock encounter
+: You - Ok, I think I got it!
+: ??? - Thank goodness! OK, come on up. There’s something you need to see.
+
+%end dialog 
+: You - Wait … what are you?
+: ??? - OK … I know this isn’t what you were expecting.
+: You - Yeah, what the hell? What’s going on?!
+: ??? - Look, I know I look different from you, but you have to understand!
+: You - But this isn’t how this was supposed to go! I thought you were human! I thought you were alive!
+: ??? - I was alive! I am alive! I may have lost my body, but I’m still here, and talking to you reminded me of that.
+: ??? - Since this world ended, I haven’t had anybody. You know what that’s like, don’t you?
+: ??? - You’ve been alone this whole time to.
+: You - *sigh* Yeah, I know it’s not easy. But—
+: when you were out there and first heard my voice, why did you follow it?
+: You - I guess … it’s just been so long since I’ve spoken with anybody. 
+: ??? - “Anybody.” Not anything. Anybody.
+: You - Yeah.
+: ??? - So… How do you feel about this?
