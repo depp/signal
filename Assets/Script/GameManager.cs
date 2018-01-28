@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour {
 	public static bool LetterFinish = false;
 	public static bool CandleFind = false;
 	public static bool CandleFinish = false;
+	public static bool WindowFind = false;
+	public static bool WindowFinish = false;
 
 	// Use this for initialization
 	void Start () {
@@ -60,6 +62,7 @@ public class GameManager : MonoBehaviour {
 
 		if(test){
 			glassPuzzleDone = true;
+			Debug.Log ("woom");
 		}
 	}
 }
