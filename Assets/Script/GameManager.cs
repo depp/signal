@@ -37,7 +37,20 @@ public class GameManager : MonoBehaviour {
 			Destroy (gameObject);
 		}
 		DontDestroyOnLoad (gameObject);
+	}
 
+	void Update(){
+		int[] solution = { 2, 6, 4 };
+		bool test = true;
 
+		for (int i = 0; i < 3; i++) {
+			if (glassState [i] != solution [i]) {
+				test = false;
+			}
+		}
+
+		if(test){
+			glassPuzzleDone = true;
+		}
 	}
 }

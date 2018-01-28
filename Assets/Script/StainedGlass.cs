@@ -21,13 +21,15 @@ public class StainedGlass : MonoBehaviour, IPointerDownHandler {
 	}
 
 	public void OnPointerDown(PointerEventData data) {
-		var colorArray = colors.colors;
-		colorIndex++;
-		if (colorIndex >= colorArray.Length) {
-			colorIndex = 0;
-		} else if (colorIndex < 0) {
-			colorIndex = colorArray.Length - 1;
+		if (GameManager.glassPuzzleDone == false) {
+			var colorArray = colors.colors;
+			colorIndex++;
+			if (colorIndex >= colorArray.Length) {
+				colorIndex = 0;
+			} else if (colorIndex < 0) {
+				colorIndex = colorArray.Length - 1;
+			}
+			sprite.color = colorArray [colorIndex];
 		}
-		sprite.color = colorArray[colorIndex];
 	}
 }
