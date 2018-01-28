@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour {
 	public static bool botLayer = false;
 	public static bool finalPuzzleDone = false;
 
+	//Letter
+	public static int letterState;
+
 	// Use this for initialization
 	void Start () {
 		if (instance == null) {
