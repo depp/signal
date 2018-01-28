@@ -13,7 +13,7 @@ public class CursorChangeOverObject : MonoBehaviour {
 		Cursor.SetCursor (changeTo, hotSpot, cursorMode);
 	}
 	void OnMouseExit () {
-		ReturnToDefault ();
+		Cursor.SetCursor (defaultCursor, hotSpot, cursorMode);
 	}
 	public void ReturnToDefault(){
 		Cursor.SetCursor (defaultCursor, hotSpot, cursorMode);

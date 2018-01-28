@@ -10,7 +10,7 @@ public class BoardManager : MonoBehaviour {
 	public int letterPosition;
 
 	void Awake(){
-		if (GameManager.letterState != -1) {
+		if (GameManager.letterState >= 0) {
 			letterPosition = GameManager.letterState;
 			letterIsPlaced = true;
 			board [letterPosition].containsLetter = true;

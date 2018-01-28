@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
 	public static bool finalPuzzleDone = false;
 
 	//Letter
-	public static int letterState;
+	public static int letterState = -1;
 
 	// Use this for initialization
 	void Start () {

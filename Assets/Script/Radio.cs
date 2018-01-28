@@ -103,7 +103,7 @@ public class Radio : MonoBehaviour {
 		if (tunedIn && clipIndex == _solutionProgress) {
 			_solutionProgress++;
 			if (_solutionProgress == this.clipTimes.Length) {
-				Solved();
+				Solve();
 			}
 		}
 		if (tunedIn == _tunedIn) {
@@ -139,8 +139,9 @@ public class Radio : MonoBehaviour {
 		}
 	}
 
-	void Solved() {
-		GameManager.radioPuzzleDone = true;
-		Debug.Log("PUZZLE SOLVED");
+	public void Solve() {
+		voice.Stop();
+		noise.Stop();
+		Dialogue.instance.PlayScript("Radio Solved");
 	}
 }

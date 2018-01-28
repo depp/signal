@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// RadioKnob controls the movement and interaction with the knob on the radio.
 /// </summary>
 [RequireComponent(typeof(Collider2D))]
-public class RadioKnob : MonoBehaviour {
+public class RadioKnob : MonoBehaviour, IPointerDownHandler {
 	// Editor properties.
 	public Radio radio;
 	public float knobRotation;
@@ -20,7 +21,7 @@ public class RadioKnob : MonoBehaviour {
 		radio.channelChanged += ChannelDidChange;
 	}
 
-	void OnMouseDown() {
+	public void OnPointerDown(PointerEventData data) {
 		radio.NextChannel();
 	}
 
