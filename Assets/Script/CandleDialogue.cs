@@ -10,7 +10,7 @@ public class CandleDialogue : MonoBehaviour {
 			Dialogue.instance.PlayScript ("Discover Candle Puzzle", ReportFind);
 		}
 		if (GameManager.CandleFinish == false && GameManager.candlePuzzleDone == true) {
-			Dialogue.instance.PlayScript ("Complete Candle Puzzle", ReportFind);
+			Dialogue.instance.PlayScript ("Complete Candle Puzzle", ReportFinish);
 		}
 	}
 

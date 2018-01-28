@@ -10,7 +10,7 @@ public class LetterDialogue : MonoBehaviour {
 			Dialogue.instance.PlayScript ("Discover Letter Puzzle",ReportFind);
 		}
 
-		if (GameManager.LetterFinish && !GameManager.LetterFinish) {
+		if (GameManager.letterPuzzleDone && !GameManager.LetterFinish) {
 			Dialogue.instance.PlayScript ("Complete Letter Puzzle", ReportFinish);
 		}
 	}
