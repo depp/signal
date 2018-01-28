@@ -147,7 +147,7 @@ public class Dialogue : MonoBehaviour, IPointerDownHandler {
 		}
 	}
 
-	void Nothing(){
+	public static void Nothing(){
 
 	}
 }
