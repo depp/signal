@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: 3972597bf5a0c4c4bbee832e869c780d, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -195,12 +194,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1.0794277}
-      - {x: -3.5324655, y: 1.0635824}
-      - {x: -3.4834647, y: -0.2998159}
-      - {x: -0.9849248, y: -1.8018668}
-      - {x: 1.1437812, y: -3.2315698}
-      - {x: 1.1496272, y: 1.023869}
+    - - {x: -2.2310028, y: 1.1610489}
+      - {x: -2.6074142, y: 0.32898307}
+      - {x: -2.6074162, y: -2.7998612}
+      - {x: -1.905437, y: -3.1021729}
+      - {x: -1.8827682, y: -1.9651103}
+      - {x: -1.8490262, y: -0.6468723}
+      - {x: -1.8431802, y: 0.39809918}
 --- !u!1 &405596866
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715576960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.27, y: -0.99, z: 0}
+  m_LocalPosition: {x: -0.3, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1540645868}
@@ -337,8 +337,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.02999413, y: 0.52009004}
-      - {x: -0.5911126, y: 0.48896062}
+    - - {x: 0.48669463, y: 3.1287003}
+      - {x: 0.01316151, y: 3.112409}
+      - {x: -0.57427955, y: 3.0812798}
       - {x: -0.5714859, y: 0.10930669}
       - {x: -0.19509745, y: 0.0847463}
       - {x: -0.21287787, y: -0.74905086}
@@ -357,7 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: 3972597bf5a0c4c4bbee832e869c780d, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -427,7 +427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: 3972597bf5a0c4c4bbee832e869c780d, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -455,12 +454,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.4579086, y: 4.048532}
-      - {x: -1.8268433, y: 4.057977}
-      - {x: -1.7056236, y: 0.3090175}
-      - {x: -1.580636, y: -1.2061573}
-      - {x: 2.4146285, y: -1.206157}
-      - {x: 2.4601884, y: 0.031019062}
+    - - {x: 0.60780907, y: 5.789802}
+      - {x: -2.4798193, y: 5.8264556}
+      - {x: -2.603466, y: 0.33622462}
+      - {x: -2.6145153, y: -0.71642506}
+      - {x: -0.08844805, y: 0.12700295}
+      - {x: 0.6100879, y: 0.5207513}
 --- !u!1 &1301229325
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +485,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1301229325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.92, y: -2.82, z: 0}
+  m_LocalPosition: {x: 8.37, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1540645868}
@@ -516,11 +515,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.116555214, y: 0.7474611}
-      - {x: -0.91220474, y: 0.30901694}
-      - {x: 0.09212875, y: -2.2076962}
+    - - {x: 0.19817734, y: 3.2233303}
+      - {x: -1.0426702, y: 3.2957606}
+      - {x: -1.9856582, y: 2.6239505}
+      - {x: -1.8644619, y: -1.3778391}
+      - {x: -0.37039566, y: -2.098867}
       - {x: 0.91802883, y: -2.1494186}
-      - {x: 1.1064653, y: 1.0666354}
+      - {x: 1.0248432, y: 2.4542108}
 --- !u!114 &1301229328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,7 +533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: 3972597bf5a0c4c4bbee832e869c780d, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -600,7 +600,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 56ee8702aed371e4a9e4f1253a222492, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 70c5a884615ac7f41a2facd00025f677, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -643,7 +643,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 20.083334, y: 10.375}
+    oldSize: {x: 19.7, y: 11.3}
     newSize: {x: 9.64, y: 4.98}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -663,7 +663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 0}
   changeTo: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
