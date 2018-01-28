@@ -17,13 +17,15 @@ public class Radio : MonoBehaviour {
 	public float[] clipTimes; // The time, in seconds, of the start of each clip in the speech.
 	public AudioSource noise;
 	public AudioSource voice;
+	public float solutionTolerance = 0.3f; // +/- tolerance for timing of solution.
+	public GameObject sceneTransition;
 
 	// Private state.
 	int _channel; // Channel we are tuned in to.
 	bool _moving; // Needle / dial currently moving.
 	float _startFraction, _endFraction, _curFraction, _time; // Needle / dial movement.
-	bool _tunedIn; // Are we currently tuned in to the right channel?
-	int _solutionProgress; // Once we listen to clip 0, this increments to 0 -> 1, etc. Resets every cycle.
+	int _clipIndex; // Clip currently being broadcast.
+	int _solutionIndex = 1; // Position in solution 0..clipCount, clipCount = solved.
 
 	/// <summary>
 	/// Gets the current radio channel number, 0..channelCount-1.
@@ -72,6 +74,22 @@ public class Radio : MonoBehaviour {
 			c = 0;
 		}
 		channel = c;
+		if (_solutionIndex > 0) {
+			if (_solutionIndex == clipTimes.Length) {
+				_solutionIndex = 0;
+				return;
+			}
+			float curTime = voice.time;
+			float targetTime = clipTimes[_solutionIndex - 1];
+			float delta = Mathf.Abs(targetTime - curTime);
+			bool ok = delta < solutionTolerance;
+			// Debug.LogFormat("OK={0}, delta={1}", ok, delta);
+			if (!ok) {
+				_solutionIndex = 0;
+			} else {
+				_solutionIndex++;
+			}
+		}
 	}
 		
 	// UpdateFraction updates the dial & knob position.
@@ -91,26 +109,26 @@ public class Radio : MonoBehaviour {
 
 	// UpdateAudio updates the audio sources to match the radio channel.
 	void UpdateAudio() {
-		// Index of the current clip playing.
-		int clipIndex = ClipIndex();
-		// We wrapped around, reset the solution lock.
-		if (_solutionProgress > clipIndex + 1) {
-			_solutionProgress = 0;
-		}
-		// Channel that this clip plays on.
-		int clipChannel = clipIndex % channelCount;
-		bool tunedIn = clipChannel == channel;
-		if (tunedIn && clipIndex == _solutionProgress) {
-			_solutionProgress++;
-			if (_solutionProgress == this.clipTimes.Length) {
+		if (voice.time < clipTimes[0]) {
+			if (_solutionIndex == clipTimes.Length) {
 				Solve();
 			}
+			if (_clipIndex != 0) {
+				_clipIndex = 0;
+				_solutionIndex = 1;
+			}
+		} else if (_clipIndex < clipTimes.Length) {
+			float switchTime = clipTimes[_clipIndex];
+			if (voice.time > switchTime) {
+				_clipIndex++;
+				// Debug.LogFormat("clipIndex {0}, solutionIndex {1}, time {2}", _clipIndex, _solutionIndex, switchTime);
+				if (_clipIndex == clipTimes.Length && _solutionIndex == clipTimes.Length) {
+					Solve();
+				}
+			}
 		}
-		if (tunedIn == _tunedIn) {
-			return;
-		}
-		_tunedIn = tunedIn;
-		voice.mute = !tunedIn;
+		int clipChannel = _clipIndex % channelCount;
+		voice.mute = clipChannel != _channel;
 	}
 
 	// ClipIndex returns the index of the current audio clip playing.
@@ -142,6 +160,12 @@ public class Radio : MonoBehaviour {
 	public void Solve() {
 		voice.Stop();
 		noise.Stop();
-		Dialogue.instance.PlayScript("Radio Solved");
+		enabled = false;
+		Dialogue.instance.PlayScript("Radio Solved", SolveDone);
+	}
+
+	void SolveDone() {
+		gameObject.SetActive(false);
+		sceneTransition.SetActive(true);
 	}
 }

@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour {
 	//Letter
 	public static int letterState = -1;
 
+	//Final lock
+	public static int[] lockStates = {0,0,0,0,0,0,0,0,0};
+
 	// Use this for initialization
 	void Start () {
 		if (instance == null) {

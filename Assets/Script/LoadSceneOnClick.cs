@@ -1,14 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class LoadSceneOnClick : MonoBehaviour {
-	public int sceneCode;
-	private Texture2D defaultCursor;
+public class LoadSceneOnClick : MonoBehaviour, IPointerDownHandler {
+	public string sceneName;
 
-	void OnMouseDown(){
-		Cursor.SetCursor (defaultCursor,Vector2.zero,CursorMode.Auto);
-		SceneManager.LoadScene (sceneCode);
+	public void OnPointerDown(PointerEventData data) {
+		SceneChanger.ChangeScene(sceneName);
 	}
 }

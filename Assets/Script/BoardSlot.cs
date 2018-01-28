@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class BoardSlot : MonoBehaviour {
+public class BoardSlot : MonoBehaviour, IPointerDownHandler {
 	public BoardManager manager;
 	public bool containsLetter = false;
 
@@ -24,7 +25,7 @@ public class BoardSlot : MonoBehaviour {
 		}
 	}
 
-	void OnMouseDown(){
+	public void OnPointerDown(PointerEventData data) {
 		if (containsLetter == false){
 			manager.ClearBoard ();
 			containsLetter = true;
