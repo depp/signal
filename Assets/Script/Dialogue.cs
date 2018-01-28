@@ -54,7 +54,7 @@ public class Dialogue : MonoBehaviour, IPointerDownHandler {
 		}
 		LoadScript();
 		Script scriptObj;
-		if (!_scripts.TryGetValue(script, out scriptObj)) {
+		if (!_scripts.TryGetValue(script.ToLowerInvariant(), out scriptObj)) {
 			Debug.LogErrorFormat("No such script: {0}", script);
 			return;
 		}
@@ -122,7 +122,7 @@ public class Dialogue : MonoBehaviour, IPointerDownHandler {
 						if (scriptName != null) {
 							_scripts[scriptName] = new Script{lines = scriptLines.ToArray()};
 						}
-						scriptName = line.Substring(1).TrimStart();
+						scriptName = line.Substring(1).TrimStart().ToLowerInvariant();
 						if (scriptName.Length == 0) {
 							Debug.LogErrorFormat("Invalid dialogue: line {0}", lineno);
 						}
@@ -133,12 +133,11 @@ public class Dialogue : MonoBehaviour, IPointerDownHandler {
 							Debug.LogErrorFormat("Invalid dialogue: line {0}", lineno);
 							continue;
 						}
-						Line lineObj = new Line();
-						if (!string.IsNullOrEmpty(fields[0])) {
-							lineObj.audio = fields[0];
+						string audio = fields[0].Trim(), text = fields[1].Trim();
+						if (audio.Length == 0) {
+							audio = null;
 						}
-						lineObj.text = fields[1];
-						scriptLines.Add(lineObj);
+						scriptLines.Add(new Line{ audio = audio, text = text });
 						break;
 				}
 			}
