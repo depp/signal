@@ -122,6 +122,7 @@ public class Dialogue : MonoBehaviour, IPointerDownHandler {
 						if (scriptName != null) {
 							_scripts[scriptName] = new Script{lines = scriptLines.ToArray()};
 						}
+						scriptLines.Clear();
 						scriptName = line.Substring(1).TrimStart().ToLowerInvariant();
 						if (scriptName.Length == 0) {
 							Debug.LogErrorFormat("Invalid dialogue: line {0}", lineno);
