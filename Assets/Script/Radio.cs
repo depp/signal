@@ -82,7 +82,7 @@ public class Radio : MonoBehaviour {
 			float targetTime = clipTimes[_solutionIndex - 1];
 			float delta = Mathf.Abs(targetTime - curTime);
 			bool ok = delta < solutionTolerance;
-			Debug.LogFormat("OK={0}, delta={1}", ok, delta);
+			// Debug.LogFormat("OK={0}, delta={1}", ok, delta);
 			if (!ok) {
 				_solutionIndex = 0;
 			} else {
@@ -109,6 +109,9 @@ public class Radio : MonoBehaviour {
 	// UpdateAudio updates the audio sources to match the radio channel.
 	void UpdateAudio() {
 		if (voice.time < clipTimes[0]) {
+			if (_solutionIndex == clipTimes.Length) {
+				Solve();
+			}
 			if (_clipIndex != 0) {
 				_clipIndex = 0;
 				_solutionIndex = 1;
@@ -117,7 +120,8 @@ public class Radio : MonoBehaviour {
 			float switchTime = clipTimes[_clipIndex];
 			if (voice.time > switchTime) {
 				_clipIndex++;
-				if (_clipIndex == clipTimes.Length && _clipIndex == _solutionIndex) {
+				Debug.LogFormat("clipIndex {0}, solutionIndex {1}, time {2}", _clipIndex, _solutionIndex, switchTime);
+				if (_clipIndex == clipTimes.Length && _solutionIndex == clipTimes.Length) {
 					Solve();
 				}
 			}

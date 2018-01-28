@@ -527,7 +527,7 @@ MonoBehaviour:
   - 2.69
   - 3.29
   - 4.04
-  - 4.89
+  - 4.72
   noise: {fileID: 919924151}
   voice: {fileID: 10794758}
   solutionTolerance: 0.3
