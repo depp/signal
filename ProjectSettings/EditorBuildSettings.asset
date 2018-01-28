@@ -4,24 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Title.unity
-    guid: 2d6dcddddcef24560b54c075841b7a3b
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Michael_Test/Radio.unity
-    guid: 1d9f0061e58609d45b55a813a7c55f0f
-  - enabled: 1
-    path: Assets/Scenes/Church.unity
-    guid: 823b7685d11ab0846863448747f4a2c7
-  - enabled: 1
-    path: Assets/Scenes/Candle.unity
-    guid: 22ca761c02fd0e84f8aba9141bc83d09
-  - enabled: 1
-    path: Assets/Scenes/FinalDoor.unity
-    guid: d6c08d5967376b749a0f1310c72f98c6
-=======
-    path: Assets/Dietrich_Test/Radio.unity
-    guid: 1b81eac26e8614d73aee11e1da7e3b29
->>>>>>> 25ea3e72e5c460f1832a6d4647cb32df7fcc8fec
+  m_Scenes: []
