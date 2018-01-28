@@ -12,7 +12,19 @@ public class LockHandler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		if (position == 0) {
+			for (int i = 0; i < 3; i++) {
+				locks [i].currentPosition = GameManager.lockStates [i];
+			}
+		} else if (position == 1) {
+			for (int i = 3; i < 6; i++) {
+				locks [i].currentPosition = GameManager.lockStates [i];
+			}
+		} else if (position == 2) {
+			for (int i = 6; i < 9; i++) {
+				locks [i].currentPosition = GameManager.lockStates [i];
+			}
+		}
 	}
 	
 	// Update is called once per frame
@@ -41,6 +53,20 @@ public class LockHandler : MonoBehaviour {
 			}
 		}
 
+		if (position == 0) {
+			for (int i = 0; i < 3; i++) {
+				GameManager.lockStates [i] = locks [i].currentPosition;
+			}
+		} else if (position == 1) {
+			for (int i = 3; i < 6; i++) {
+				GameManager.lockStates [i] = locks [i].currentPosition;
+			}
+		} else if (position == 2) {
+			for (int i = 6; i < 9; i++) {
+				GameManager.lockStates [i] = locks [i].currentPosition;
+			}
+		}
+			
 		if (position == 0 && GameManager.topLayer) {
 			locks [0].currentPosition = correctCombo [0];
 			locks [1].currentPosition = correctCombo [1];
