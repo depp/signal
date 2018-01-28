@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Candle : MonoBehaviour {
+public class Candle : MonoBehaviour, IPointerDownHandler {
 	public CandleStates states;
 	public int currentState = 0;
 	SpriteRenderer sprite;

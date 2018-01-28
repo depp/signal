@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class StainedGlass : MonoBehaviour {
+public class StainedGlass : MonoBehaviour, IPointerDownHandler {
 	public ColorSet colors;
 	int colorIndex;
 	SpriteRenderer sprite;

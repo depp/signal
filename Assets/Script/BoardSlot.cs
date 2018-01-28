@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class BoardSlot : MonoBehaviour {
+public class BoardSlot : MonoBehaviour, IPointerDownHandler {
 	public BoardManager manager;
 	public bool containsLetter = false;
 

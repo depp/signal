@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LockSlot : MonoBehaviour {
+public class LockSlot : MonoBehaviour, IPointerDownHandler {
 	public int currentPosition = 0;
 	public Sprite[] visuals;
 	SpriteRenderer sprite;

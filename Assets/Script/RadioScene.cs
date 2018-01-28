@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class RadioScene : MonoBehaviour {
+public class RadioScene : MonoBehaviour, IPointerDownHandler {
 	public Texture2D defaultCursor;
 	public GameObject background;
 	public GameObject background2;
