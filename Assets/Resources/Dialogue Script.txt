@@ -1,69 +1,70 @@
 %radio solved
-: You - umm... hello?
-: ??? - Oh thank the Lord! Listen, I’ve been trapped in here for god knows how long, and I can’t get out!
-: ??? - Please, find a way to get this door open!
-: You - OK, help me out here. Where are you?
-: ??? - I’m in the bell tower of the church! I think the only way out is blocked from the outside!
-: You - OK, sit tight, I’ll try and get you out.
+S02L01Y: You - Umm… hello?
+S02L02R: ??? - Oh thank goodness! Listen, I’ve been trapped in here for God knows how long, and I can’t get out!
+S02L03R: ??? - Can you find a way to get this door open?
+S02L04Y: You - Help me out here. Where are you?
+S02L05R: ??? - I’m in the bell tower of the church! I think the only way out is blocked from the outside!
+S02L06Y: You - OK, sit tight, I’ll try and get you out.
 
 %entering church
-: You - OK, I’m in.
-: ??? - Look for a door on the right—should lead you right up to the belltower.
+S03L01Y: You - Alright, I’m in.
+S03L02R: ??? - Look for a door on the right—should lead you right up to the belltower.
 
 %first lock encounter
-: You - OK, I’m at the door, it doesn’t seem to be blocked by anything,
-: You -  but there’s some sort of combination lock on it.
-: ??? - It has to be around here somewhere… right?
-: You - I hope so… I’ll take a look around.
+S04L01Y: You - OK, I’m at the door. It doesn’t seem to be blocked by anything,
+S04L02Y: You - but there’s some sort of combination lock on it.
+S04L03R: ??? - It has to be around here somewhere… right?
+S04L04Y: You - I hope so… I’ll take a look around.
 
 %discover letter puzzle
-: You - Found a letter down here. Something about a lockdown of a city?
-: ??? - Yeah, that one was for me. I wanted to send her letters back, I really did,
-: ??? - but those bastards at the post office blocked mail from leaving the city.
+S05L01Y: You - I found a letter down here. Something about a lockdown of a city?
+S05L02R: ??? - Yeah, that one was for me. I wanted to send her letters back, I really did,
+S05L03R: ??? - but those bastards at the post office blocked mail from leaving the city.
 
 %complete letter puzzle
-: You - What was her name?
-: ??? - Abigail, but she preferred Abby. When things went bad, she went back home to see her family.
-: You - And never came back…?
-: ??? - *sigh* …
+S06L01Y: You - What was her name?
+S06L02R: ??? - Abigail, but she preferred Abby. When things went bad, she went back home to see her family.
+S06L03Y: You - And never came back…?
+S06L04R: ??? - *sigh*…
 
 %discover candle puzzle
-: You - I’m in the confession booth—I think there are some clues here we can use.
-: You - It looks like people etched their confessions right into the wood.
-: ??? - Huh. Who knew it would take the end of the world for people to clear their conscience?
+S07L01Y: You - I’m in the confession booth—I think there are some clues here we can use.
+S07L02Y: You - It looks like people etched their confessions right into the wood.
+S07L03R: ??? - Huh. Who knew it would take the end of the world for people to clear their conscience?
 
 %complete candle puzzle
-: ??? - I remember everyday I had to light all those candles, and I hated it. Those things would never stay lit for more than 10 minutes.
-: ??? - Heh. It seems ridiculous to complain about things like that now…
-: You - When did you get a chance to light all these candles?
-: ??? - You know, I wasn’t always stuck up here.
+S08L01R: ??? - I remember every day I had to light all those candles, and I hated it. 
+S08L02R: ??? - Those things would never stay lit for more than ten minutes.
+S08L03R: ??? - Heh. It seems ridiculous to complain about things like that now…
+S08L04Y: You - When did you get a chance to light all these candles?
+S08L05R: ??? - You know, I wasn’t always stuck up here.
 
 %discover stained glass puzzle
-: You - So how did you end up in a church of all places?
-: ??? - This place used to be a shelter when things started to go south. Resources ran out, and so did the people.
-: ??? - I’m the only one who stuck around. Went upstairs to look for supplies one day ... and well, here I am.
+S09L01Y: You - So how did you end up in a church of all places?
+S09L02R: ??? - This place used to be a shelter when things started to go south. Resources ran out, and so did the people.
+S09L03R: ??? - I’m the only one who stuck around. Went upstairs to look for supplies one day… and well, here I am.
 
 %complete stained glass puzzle
-: ??? - You know, I remember when this place was still running, people coming in and out at all hours of the day.
-: ??? - I know that most of them weren’t here to talk to me, but any human contact was nice…
-: ??? - I miss it so much…… I’m glad you’re here.
+S10L01R: ??? - You know, I remember when this place was still running, people coming in and out at all hours of the day.
+S10L02R: ??? - I know that most of them weren’t here to talk to me, but any human contact was nice…
+S10L03R: ??? - I miss it so much…… I’m glad you’re here.
 
 %lock encounter
-: You - Ok, I think I got it!
-: ??? - Thank goodness! OK, come on up. There’s something you need to see.
+S11L01Y: You - Ok, I think I got it!
+S11L02R: ??? - Thank goodness! OK, come on up. There’s something you need to see.
 
 %end dialog 
-: You - Wait … what are you?
-: ??? - OK … I know this isn’t what you were expecting.
-: You - Yeah, what the hell? What’s going on?!
-: ??? - Look, I know I look different from you, but you have to understand!
-: You - But this isn’t how this was supposed to go! I thought you were human! I thought you were alive!
-: ??? - I was alive! I am alive! I may have lost my body, but I’m still here, and talking to you reminded me of that.
-: ??? - Since this world ended, I haven’t had anybody. You know what that’s like, don’t you?
-: ??? - You’ve been alone this whole time to.
-: You - *sigh* Yeah, I know it’s not easy. But—
-: ??? - when you were out there and first heard my voice, why did you follow it?
-: You - I guess … it’s just been so long since I’ve spoken with anybody. 
-: ??? - “Anybody.” Not anything. Anybody.
-: You - Yeah.
-: ??? - So… How do you feel about this?
+S12L01Y: You - Wait… what are you?
+S12L02R: ??? - OK… I know this isn’t what you were expecting.
+S12L03Y: You - Yeah, what the hell? What’s going on?!
+S12L04R: ??? - Look, I know I look different from you, but you have to understand!
+S12L05Y: You - But this isn’t how this was supposed to go! I thought you were human! I thought you were alive!
+S12L06R: ??? - I was alive! I am alive! I may have lost my body, but I’m still here, and talking to you reminded me of that.
+S12L07R: ??? - Since this world ended, I haven’t had anybody. You know what that’s like, don’t you?
+S12L08R: ??? - You’ve been alone this whole time, too.
+S12L09Y: You - *sigh* Yeah, I know it’s not easy. But—
+S12L10R: ??? - Answer this one question for me honestly: when you were out there and first heard my voice, why did you follow it?
+S12L11Y: You - I guess… it’s just been so long since I’ve spoken with another person.
+S12L12R: ??? - “Another person.”
+S12L13Y: You - …Yeah.
+S12L14R: ??? - So… what now?
