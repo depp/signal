@@ -4,7 +4,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class CursorChangeOverObject : MonoBehaviour {
-	public Texture2D defaultCursor;
 	public Texture2D changeTo;
 	public Vector2 hotSpot = Vector2.zero;
 	public CursorMode cursorMode = CursorMode.Auto;
@@ -13,9 +12,6 @@ public class CursorChangeOverObject : MonoBehaviour {
 		Cursor.SetCursor (changeTo, hotSpot, cursorMode);
 	}
 	void OnMouseExit () {
-		Cursor.SetCursor (defaultCursor, hotSpot, cursorMode);
-	}
-	public void ReturnToDefault(){
-		Cursor.SetCursor (defaultCursor, hotSpot, cursorMode);
+		Cursor.SetCursor(null, Vector2.zero, cursorMode);
 	}
 }
