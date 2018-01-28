@@ -7,6 +7,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class SceneChanger : MonoBehaviour {
 	private static SceneChanger _instance;
+	private static bool _doFadeIn;
 	public AnimationCurve curve;
 	public float transitionTime = 0.5f;
 	public Color fadeColor = Color.black;
@@ -23,7 +24,10 @@ public class SceneChanger : MonoBehaviour {
 	}
 
 	void Start() {
-		gameObject.SetActive(false);
+		_image = GetComponent<Image>();
+		if (!_doFadeIn) {
+			gameObject.SetActive(false);
+		}
 	}
 
 	void OnDestroy() {
@@ -35,12 +39,21 @@ public class SceneChanger : MonoBehaviour {
 	void Update() {
 		_time += Time.deltaTime;
 		if (_time >= transitionTime) {
-			gameObject.SetActive(false);
-			SceneManager.LoadScene(_target);
+			if (_doFadeIn) {
+				_doFadeIn = false;
+				gameObject.SetActive(false);
+			} else {
+				_doFadeIn = true;
+				SceneManager.LoadScene(_target);
+			}
 			return;
 		}
 		Color color = fadeColor;
-		color.a = curve.Evaluate(_time / transitionTime);
+		float frac = _time / transitionTime;
+		if (_doFadeIn) {
+			frac = 1.0f - frac;
+		}
+		color.a = curve.Evaluate(frac);
 		_image.color = color;
 	}
 
@@ -50,7 +63,7 @@ public class SceneChanger : MonoBehaviour {
 
 	void ChangeSceneImpl(string target) {
 		_target = target;
-		_image = GetComponent<Image>();
+		_image.color = Color.clear;
 		Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 		gameObject.SetActive(true);
 	}
