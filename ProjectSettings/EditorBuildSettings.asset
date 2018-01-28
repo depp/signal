@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ChurchInt.unity
     guid: 823b7685d11ab0846863448747f4a2c7
   - enabled: 1
+    path: Assets/Scenes/ChurchIntFirst.unity
+    guid: 32deffdfc09b045d6917df5c8df6306f
+  - enabled: 1
     path: Assets/Scenes/End.unity
     guid: b402f67bfc24ad2448b2d2997a787cb2
   - enabled: 1
