@@ -714,7 +714,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Michael Poltronieri Tang
 
-    Game Design/Programming/Voice Acting - @RealMichaelTang
+    Programming/Voice Acting - @RealMichaelTang
 
 
     Aneudis Salcedo
@@ -724,12 +724,12 @@ MonoBehaviour:
 
     Demetri Sofides
 
-    Coding/Art - @dsofides
+    Programming/Art - @dsofides
 
 
     Gautam Srikishan
 
-    Music/Sound Design/Voice Recording/Scripting - @gsrikishan'
+    Music/Sound Design/Script - @gsrikishan'
 --- !u!222 &1703916357
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -884,17 +884,17 @@ MonoBehaviour:
 
     Rachel Geng
 
-    Concept/Background/Sprite Art Design - @koloquials
+    Art - @koloquials
 
 
     Jaden Horsfield
 
-    Scripting/Has Purple Hair/Moral support - @maotousarms
+    Script/Has Purple Hair/Moral support - @maotousarms
 
 
     Nyusha Iampolski
 
-    Puzzle Design/Art Design - @f.f0000'
+    Art - @f.f0000'
 --- !u!222 &1878509269
 CanvasRenderer:
   m_ObjectHideFlags: 0
