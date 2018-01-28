@@ -2225,7 +2225,7 @@ MonoBehaviour:
   - {fileID: 1480554027}
   - {fileID: 875401858}
   inputCombo: 000000000000000000000000
-  correctCombo: 040000000100000006000000
+  correctCombo: 050000000000000003000000
   position: 1
   completed: 0
 --- !u!4 &2145506575
