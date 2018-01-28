@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: b550f3792bf040a49bd3a2a1bdf2aa49
-timeCreated: 1517110259
+guid: bd3c0f0632edb424ab207ace41640039
+timeCreated: 1517110867
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: clover
-    21300002: heart
-    21300004: star
-    21300006: triangle
-    21300008: cross
-    21300010: diamond
-    21300012: circle
-    21300014: square
-    21300016: moon
-    21300018: spade
+    21300000: Numbers_0
+    21300002: Numbers_1
+    21300004: Numbers_2
+    21300006: Numbers_3
+    21300008: Numbers_4
+    21300010: Numbers_5
+    21300012: Numbers_6
+    21300014: Numbers_7
+    21300016: Numbers_8
+    21300018: Numbers_9
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -100,141 +100,141 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clover
+      name: Numbers_0
       rect:
         serializedVersion: 2
-        x: 95
-        y: 288
-        width: 57
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: heart
-      rect:
-        serializedVersion: 2
-        x: 297
-        y: 290
-        width: 59
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: star
-      rect:
-        serializedVersion: 2
-        x: 501
-        y: 289
-        width: 79
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: triangle
-      rect:
-        serializedVersion: 2
-        x: 711
-        y: 297
-        width: 75
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cross
-      rect:
-        serializedVersion: 2
-        x: 923
-        y: 300
-        width: 61
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: diamond
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 81
+        x: 911
+        y: 54
         width: 70
-        height: 83
+        height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: circle
+      name: Numbers_1
       rect:
         serializedVersion: 2
-        x: 290
-        y: 80
-        width: 76
-        height: 77
+        x: 76
+        y: 267
+        width: 60
+        height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: square
+      name: Numbers_2
       rect:
         serializedVersion: 2
-        x: 506
-        y: 95
-        width: 63
-        height: 61
+        x: 284
+        y: 263
+        width: 65
+        height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: moon
+      name: Numbers_3
       rect:
         serializedVersion: 2
-        x: 708
-        y: 85
-        width: 78
-        height: 72
+        x: 495
+        y: 263
+        width: 61
+        height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spade
+      name: Numbers_4
       rect:
         serializedVersion: 2
-        x: 905
-        y: 72
-        width: 84
-        height: 88
+        x: 700
+        y: 265
+        width: 69
+        height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Numbers_5
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 264
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Numbers_6
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 55
+        width: 66
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Numbers_7
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 58
+        width: 62
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Numbers_8
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 55
+        width: 65
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Numbers_9
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 54
+        width: 67
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
