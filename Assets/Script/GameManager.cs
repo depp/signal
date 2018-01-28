@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour {
 	public static bool EnteredChurch = false;
 	public static bool FinalDoor = false;
 	public static bool FinalDoorSecond = false;
+	public static bool LetterFind = false;
+	public static bool LetterFinish = false;
 
 	// Use this for initialization
 	void Start () {

@@ -38,6 +38,10 @@ public class BoardManager : MonoBehaviour {
 		}else{
 			GameManager.letterState = -1;
 		}
+
+		if (letterIsPlaced && board [8].containsLetter) {
+			GameManager.letterPuzzleDone = true;
+		}
 	}
 
 	public void ClearBoard(){
