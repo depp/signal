@@ -146,4 +146,8 @@ public class Dialogue : MonoBehaviour, IPointerDownHandler {
 			_scripts[scriptName] = new Script{lines = scriptLines.ToArray()};
 		}
 	}
+
+	void Nothing(){
+
+	}
 }
