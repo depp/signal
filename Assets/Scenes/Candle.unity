@@ -523,8 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d88b553173788458e1896c033dae2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  candleColliders: {fileID: 0}
-  wallColliders: {fileID: 0}
+  candleColliders: {fileID: 1831643024}
+  wallColliders: {fileID: 214022152}
 --- !u!4 &610043438
 Transform:
   m_ObjectHideFlags: 0

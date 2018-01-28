@@ -7,6 +7,7 @@ public class EnterChurch : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (GameManager.EnteredChurch == false) {
+			Report ();
 			Dialogue.instance.PlayScript ("Entering Church", Report);
 		}
 

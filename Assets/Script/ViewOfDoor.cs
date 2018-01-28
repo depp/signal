@@ -7,6 +7,7 @@ public class ViewOfDoor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!GameManager.FinalDoor) {
+			Report ();
 			Dialogue.instance.PlayScript ("First Lock Encounter", Report);
 		}
 
