@@ -16,5 +16,7 @@ public class RadioItem : MonoBehaviour, IPointerDownHandler {
 		backgroundWithRadio.SetActive(false);
 		backgroundSansRadio.SetActive(true);
 		radio.SetActive(true);
+		gameObject.SetActive(false);
+		Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 	}
 }
