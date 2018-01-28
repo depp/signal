@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
@@ -64,5 +65,15 @@ public class GameManager : MonoBehaviour {
 			glassPuzzleDone = true;
 			Debug.Log ("woom");
 		}
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			ResetEverything();
+		}
+	}
+
+	void ResetEverything(){
+		instance = null;
+		SceneManager.LoadScene ("title");
+		Destroy (gameObject);
 	}
 }
