@@ -307,7 +307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -443,7 +442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -627,7 +625,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -836,7 +833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -1186,7 +1182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -1322,7 +1317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -1779,7 +1773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -2264,7 +2257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -2473,7 +2465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -2551,7 +2542,7 @@ MonoBehaviour:
   - {fileID: 1480554027}
   - {fileID: 875401858}
   inputCombo: 000000000000000000000000
-  correctCombo: 030000000200000004000000
+  correctCombo: 000000000400000001000000
   position: 1
   completed: 0
 --- !u!4 &2145506575

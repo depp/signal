@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 2d6dcddddcef24560b54c075841b7a3b
   - enabled: 1
-    path: Assets/Dietrich_Test/Radio.unity
+    path: Assets/Scenes/Radio.unity
     guid: 1b81eac26e8614d73aee11e1da7e3b29
   - enabled: 1
     path: Assets/Scenes/ChurchInt.unity
