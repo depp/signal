@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class MaskForCandle : MonoBehaviour, IPointerDownHandler {
-	public BoxCollider2D colliders;
+	public BoxCollider2D candleColliders;
+	public BoxCollider2D wallColliders;
 
 	public void OnPointerDown (PointerEventData eventData)
 	{
-		colliders.enabled = true;
+		wallColliders.enabled = true;
+		candleColliders.enabled = true;
 		gameObject.SetActive (false);
 	}
 }
