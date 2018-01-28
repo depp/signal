@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -28,6 +29,7 @@ public class Dialogue : MonoBehaviour, IPointerDownHandler {
 	AudioSource _source;
 	Dictionary<string, Script> _scripts;
 	Line[] _currentScript;
+	Action _action;
 	int _currentLine;
 
 	void Start() {
@@ -40,7 +42,12 @@ public class Dialogue : MonoBehaviour, IPointerDownHandler {
 		PlayLine(_currentLine + 1);
 	}
 
-	public void PlayScript(string script) {
+	/// <summary>
+	/// Plays a dialogue script.
+	/// </summary>
+	/// <param name="script">Name of the script to play.</param>
+	/// <param name="action">Action to execute when the script finishes.</param>
+	public void PlayScript(string script, Action action) {
 		if (_currentScript != null) {
 			Debug.LogErrorFormat("Tried to run two scripts.");
 			return;
@@ -53,6 +60,7 @@ public class Dialogue : MonoBehaviour, IPointerDownHandler {
 		}
 		gameObject.SetActive(true);
 		_currentScript = scriptObj.lines;
+		_action = action;
 		PlayLine(0);
 	}
 
@@ -65,6 +73,7 @@ public class Dialogue : MonoBehaviour, IPointerDownHandler {
 			_currentScript = null;
 			_currentLine = 0;
 			gameObject.SetActive(false);
+			_action();
 			return;
 		}
 		Line line = _currentScript[number];

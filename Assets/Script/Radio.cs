@@ -18,6 +18,7 @@ public class Radio : MonoBehaviour {
 	public AudioSource noise;
 	public AudioSource voice;
 	public float solutionTolerance = 0.3f; // +/- tolerance for timing of solution.
+	public GameObject sceneTransition;
 
 	// Private state.
 	int _channel; // Channel we are tuned in to.
@@ -120,7 +121,7 @@ public class Radio : MonoBehaviour {
 			float switchTime = clipTimes[_clipIndex];
 			if (voice.time > switchTime) {
 				_clipIndex++;
-				Debug.LogFormat("clipIndex {0}, solutionIndex {1}, time {2}", _clipIndex, _solutionIndex, switchTime);
+				// Debug.LogFormat("clipIndex {0}, solutionIndex {1}, time {2}", _clipIndex, _solutionIndex, switchTime);
 				if (_clipIndex == clipTimes.Length && _solutionIndex == clipTimes.Length) {
 					Solve();
 				}
@@ -159,6 +160,12 @@ public class Radio : MonoBehaviour {
 	public void Solve() {
 		voice.Stop();
 		noise.Stop();
-		Dialogue.instance.PlayScript("Radio Solved");
+		enabled = false;
+		Dialogue.instance.PlayScript("Radio Solved", SolveDone);
+	}
+
+	void SolveDone() {
+		gameObject.SetActive(false);
+		sceneTransition.SetActive(true);
 	}
 }
