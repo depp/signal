@@ -19,7 +19,7 @@ public class BoardManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		for(int i = 0; i < board.Length-1; i ++){
+		for(int i = 0; i < board.Length; i ++){
 			if (board [i].containsLetter) {
 				letterIsPlaced = true;
 				letterPosition = i;
@@ -46,7 +46,7 @@ public class BoardManager : MonoBehaviour {
 
 	public void ClearBoard(){
 		letterIsPlaced = false;
-		for (int i = 0; i < board.Length - 1; i++) {
+		for (int i = 0; i < board.Length; i++) {
 			board [i].containsLetter = false;
 		}
 	}

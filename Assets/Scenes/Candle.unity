@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WallMask: {fileID: 610043435}
   colliders: {fileID: 214022152}
+  otherOpen: {fileID: 1831643024}
 --- !u!114 &214022151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,7 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d88b553173788458e1896c033dae2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliders: {fileID: 214022152}
+  candleColliders: {fileID: 0}
+  wallColliders: {fileID: 0}
 --- !u!4 &610043438
 Transform:
   m_ObjectHideFlags: 0
@@ -1435,7 +1437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d88b553173788458e1896c033dae2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliders: {fileID: 1831643024}
+  candleColliders: {fileID: 1831643024}
+  wallColliders: {fileID: 214022152}
 --- !u!4 &1218997036
 Transform:
   m_ObjectHideFlags: 0
@@ -1957,6 +1960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CandleMask: {fileID: 1218997034}
   colliders: {fileID: 1831643024}
+  otherOpen: {fileID: 214022152}
 --- !u!114 &1831643023
 MonoBehaviour:
   m_ObjectHideFlags: 0
