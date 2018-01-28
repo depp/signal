@@ -142,7 +142,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1540645868}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &245084021
 MonoBehaviour:
@@ -156,8 +156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneCode: 4
-  sceneName: FinalDoor
-  cursorChanger: {fileID: 0}
 --- !u!114 &245084022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultCursor: {fileID: 0}
   changeTo: {fileID: 2800000, guid: 3972597bf5a0c4c4bbee832e869c780d, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -358,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultCursor: {fileID: 0}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -373,8 +373,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneCode: 0
-  sceneName: 
-  cursorChanger: {fileID: 0}
 --- !u!1 &830472710
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +402,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1540645868}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &830472712
 MonoBehaviour:
@@ -418,8 +416,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneCode: 0
-  sceneName: 
-  cursorChanger: {fileID: 0}
 --- !u!114 &830472713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultCursor: {fileID: 0}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -535,6 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultCursor: {fileID: 0}
   changeTo: {fileID: 2800000, guid: fb3e9b3d4c1e719459ab4fa66b7ba8ad, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
@@ -550,8 +548,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneCode: 3
-  sceneName: 
-  cursorChanger: {fileID: 0}
 --- !u!1 &1540645866
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,8 +622,8 @@ Transform:
   m_Children:
   - {fileID: 715576961}
   - {fileID: 1301229326}
-  - {fileID: 830472711}
   - {fileID: 245084020}
+  - {fileID: 830472711}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -667,6 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d5f610e98d664898dcf94b57cdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultCursor: {fileID: 0}
   changeTo: {fileID: 2800000, guid: 4ba1c453f9ab42b44aab67cbc6d55357, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
