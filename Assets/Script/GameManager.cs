@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour {
 	//Final lock
 	public static int[] lockStates = {0,0,0,0,0,0,0,0,0};
 
+	//Dialog checks
+	public static bool EnteredChurch = false;
+
 	// Use this for initialization
 	void Start () {
 		if (instance == null) {
