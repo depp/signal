@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WindowDialogue : MonoBehaviour {
-	
-	// Update is called once per frame
 	void Update () {
 		if (!GameManager.WindowFind) {
+			ReportFind ();
 			Dialogue.instance.PlayScript ("Discover Stained Glass Puzzle", ReportFind);
 		}
 		if (GameManager.glassPuzzleDone && !GameManager.WindowFinish) {
+			GameManager.WindowFinish = true;
 			Dialogue.instance.PlayScript ("Complete Stained Glass Puzzle", ReportFinish);
 		}
 	}
