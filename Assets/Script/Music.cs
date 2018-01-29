@@ -7,11 +7,12 @@ public class Music : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (instance == null) {
-			instance = this;
-		} else {
+		instance = this;
+		DontDestroyOnLoad (gameObject);
+	}
+	void Update(){
+		if (instance != this) {
 			Destroy (gameObject);
 		}
-		DontDestroyOnLoad (gameObject);
 	}
 }

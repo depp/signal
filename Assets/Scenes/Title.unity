@@ -477,6 +477,7 @@ GameObject:
   - component: {fileID: 1293925715}
   - component: {fileID: 1293925717}
   - component: {fileID: 1293925718}
+  - component: {fileID: 1293925719}
   m_Layer: 0
   m_Name: music
   m_TagString: Untagged
@@ -493,7 +494,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 05ff0d9f545bef5418fdc0c0b7b4b9c5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 26c4b21ab6972421eabdece90dac7226, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -605,6 +606,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &1293925719
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1293925714}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1398576504
 GameObject:
   m_ObjectHideFlags: 0
