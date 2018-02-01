@@ -4,6 +4,8 @@ Signal is a game jam game made for Global Game Jam 2018. It is a point and click
 
 Signal uses the Unity engine. Checkouts from this repository are known to be buildable with Unity 2017.3.0f3.
 
+The soundtrack is available on SoundCloud: https://soundcloud.com/floatingfast/sets/signal
+
 ## Team Members
 
 In alphabetical order,
